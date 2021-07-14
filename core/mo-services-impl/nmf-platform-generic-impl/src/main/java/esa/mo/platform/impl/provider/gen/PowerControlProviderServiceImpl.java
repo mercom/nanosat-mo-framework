@@ -96,6 +96,8 @@ public class PowerControlProviderServiceImpl extends PowerControlInheritanceSkel
         PowerControlHelper.POWERCONTROL_SERVICE_NAME.toString(),
         PowerControlHelper.POWERCONTROL_SERVICE, this);
 
+    //TODO ML adapter.subscribeToStatusParameter(connection);
+
     running = true;
     initialiased = true;
     LOGGER.info("Power Control service READY");

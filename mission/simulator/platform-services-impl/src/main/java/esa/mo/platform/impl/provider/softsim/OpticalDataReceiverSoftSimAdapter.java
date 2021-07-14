@@ -21,6 +21,7 @@
 package esa.mo.platform.impl.provider.softsim;
 
 import esa.mo.platform.impl.provider.gen.OpticalDataReceiverAdapterInterface;
+import esa.mo.platform.impl.provider.gen.PowerControlAdapterInterface;
 import opssat.simulator.main.ESASimulator;
 import org.ccsds.moims.mo.mal.structures.Duration;
 
@@ -33,7 +34,7 @@ public class OpticalDataReceiverSoftSimAdapter implements OpticalDataReceiverAda
 
   private final ESASimulator instrumentsSimulator;
 
-  public OpticalDataReceiverSoftSimAdapter(ESASimulator instrumentsSimulator)
+  public OpticalDataReceiverSoftSimAdapter(ESASimulator instrumentsSimulator, PowerControlAdapterInterface pcAdapter)
   {
     this.instrumentsSimulator = instrumentsSimulator;
   }

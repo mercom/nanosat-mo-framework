@@ -21,6 +21,7 @@
 package esa.mo.platform.impl.provider.softsim;
 
 import esa.mo.platform.impl.provider.gen.AutonomousADCSAdapterInterface;
+import esa.mo.platform.impl.provider.gen.PowerControlAdapterInterface;
 import esa.mo.platform.impl.util.HelperIADCS100;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -55,7 +56,7 @@ public class AutonomousADCSSoftSimAdapter implements AutonomousADCSAdapterInterf
   private final static byte MODE_STOP = 0;  // Zero means stop; One means start
   private final static byte MODE_START = 1;  // Zero means stop; One means start
 
-  public AutonomousADCSSoftSimAdapter(ESASimulator instrumentsSimulator)
+  public AutonomousADCSSoftSimAdapter(ESASimulator instrumentsSimulator, PowerControlAdapterInterface pcAdapter)
   {
     this.instrumentsSimulator = instrumentsSimulator;
   }

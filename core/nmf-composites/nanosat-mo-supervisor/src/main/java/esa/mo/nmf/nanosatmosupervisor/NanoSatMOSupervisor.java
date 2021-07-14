@@ -156,6 +156,9 @@ public abstract class NanoSatMOSupervisor extends NMFProvider {
     Logger.getLogger(NanoSatMOSupervisor.class.getName()).log(Level.INFO,
         "URI: {0}\n", primaryURI);
 
+    //Once all services are loaded and configured, subscribe to status parameter
+    this.startStatusTracking();
+
     // We just loaded everything, it is a good time to
     // hint the garbage collector and clean up some memory
     // NanoSatMOFrameworkProvider.hintGC();
@@ -236,5 +239,7 @@ public abstract class NanoSatMOSupervisor extends NMFProvider {
   }
 
   public abstract void initPlatformServices(COMServicesProvider comServices);
+
+  protected abstract void startStatusTracking();
 
 }
